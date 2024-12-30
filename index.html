@@ -1,0 +1,20 @@
+// Create an instance of an Express application
+const app = express();
+
+// Define the port the server will listen on
+const PORT = 3000;
+
+// Define a route for the root URL
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+// Define a route for the /about URL
+app.get('/about', (req, res) => {
+  res.send('About this application: This is a simple Express app.');
+});
+
+// Start the server and listen on the defined port
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
